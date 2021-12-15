@@ -1,0 +1,301 @@
+.cart {
+  @include centering($dir: column);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  // process ------------------------------------------------------------------------
+
+  &_process {
+    @include centering;
+    width: 100%;
+    height: 140px;
+    background-color: #ebd0e4;
+
+    img {
+      margin-right: -5%;
+      margin-left: 5%;
+
+      @media (max-width: 850px) {
+        margin-right: -8%;
+        margin-left: 2%;
+      }
+    }
+
+    & div:nth-child(3) {
+      opacity: 0.2;
+    }
+    & div:nth-child(5) {
+      opacity: 0.2;
+    }
+
+    &_part {
+      @include centering;
+      margin-left: 10%;
+
+      p {
+        font-size: 3.5rem;
+        color: #4d2466;
+        margin-left: 20%;
+
+        @media (max-width: 850px) {
+          font-size: 2rem;
+          margin-left: 10%;
+        }
+      }
+
+      div {
+        @include centering($dir: column);
+
+        @media (max-width: 470px) {
+          white-space: normal;
+        }
+
+        p:nth-child(1) {
+          color: #4d2466;
+          font-size: 1.5rem;
+          font-family: iranSanse;
+          font-weight: bold;
+          white-space: nowrap;
+
+          @media (max-width: 850px) {
+            font-size: 1rem;
+          }
+          @media (max-width: 470px) {
+            white-space: normal;
+          }
+        }
+
+        p:nth-child(2) {
+          color: rgba(128, 128, 128, 0.596);
+          font-size: 0.8rem;
+          font-family: iranSanse;
+          font-weight: bold;
+          white-space: nowrap;
+
+          @media (max-width: 850px) {
+            font-size: 0.6rem;
+          }
+          @media (max-width: 470px) {
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }
+
+  // prices ------------------------------------------------------------------------
+
+  &_prices {
+    @include centering($dir: column);
+    width: 100%;
+    height: 640px;
+
+    &_row {
+      @include centering($justify: flex-start);
+      width: 1000px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+      margin-bottom: 1%;
+
+      @media (max-width: 420px) {
+        margin-bottom: 10%;
+        padding: 7%;
+      }
+
+      @media (max-width: 1050px) {
+        width: 700px;
+      }
+      @media (max-width: 750px) {
+        width: 400px;
+      }
+      @media (max-width: 420px) {
+        width: 300px;
+      }
+
+      img:nth-child(1) {
+        margin-bottom: 1.5%;
+
+        @media (max-width: 420px) {
+          width: 50px;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        font-family: iranSanse;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-right: 5%;
+        margin-left: 20%;
+
+        @media (max-width: 1050px) {
+          font-size: 0.8rem;
+          margin-right: 2%;
+          margin-left: 13%;
+        }
+      }
+
+      div {
+        @include centering($justify: space-between);
+        width: 9%;
+        margin-left: 10%;
+
+        @media (max-width: 1050px) {
+          width: 15%;
+        }
+
+        span {
+          color: gray;
+          font-size: 1.5rem;
+          cursor: pointer;
+
+          @media (max-width: 1050px) {
+            font-size: 1.1rem;
+          }
+        }
+
+        span:nth-child(2) {
+          border: gray 1px solid;
+          padding: 0.5rem;
+        }
+      }
+
+      div + span {
+        font-size: 1.3rem;
+        font-family: iranSanse;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-left: 17%;
+
+        @media (max-width: 1050px) {
+          font-size: 1rem;
+          margin-left: 10%;
+        }
+
+        @media (max-width: 750px) {
+          position: relative;
+          margin-left: 0;
+          right: -21%;
+          bottom: -40%;
+        }
+
+        @media (max-width: 420px) {
+          right: -23%;
+          bottom: -70%;
+        }
+      }
+
+      span + img {
+        margin-left: 2%;
+        cursor: pointer;
+      }
+
+      & img:nth-child(5) {
+        @media (max-width: 750px) {
+          position: relative;
+          margin-left: 0;
+          right: -12%;
+          bottom: 3%;
+        }
+        @media (max-width: 420px) {
+          right: -10%;
+          bottom: -60%;
+        }
+      }
+
+      & img:nth-child(6) {
+        @media (max-width: 750px) {
+          position: relative;
+          margin-left: 0;
+          right: -17%;
+          bottom: -31.5%;
+        }
+        @media (max-width: 420px) {
+          right: -20%;
+          bottom: 10%;
+        }
+      }
+    }
+
+    button {
+      background-color: white;
+      border: none;
+      font-size: 1.1rem;
+      font-family: iranSanse;
+      font-weight: bold;
+      white-space: nowrap;
+      margin-top: 20px;
+      margin-right: -850px;
+      cursor: pointer;
+      color: black;
+      transition: all linear 0.3s;
+
+      &:hover {
+        color: #4d2466;
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 1050px) {
+        margin-right: -550px;
+      }
+      @media (max-width: 750px) {
+        margin-right: -250px;
+        font-size: 0.9rem;
+      }
+      @media (max-width: 420px) {
+        margin-right: -150px;
+        font-size: 0.9rem;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  // statistic ------------------------------------------------------------------------
+
+  &_statistic {
+    @include centering;
+    width: 100%;
+    height: 99px;
+    background-color: #4d2466;
+
+    div {
+      @include centering($dir: column);
+      margin-right: 3%;
+
+      span:nth-child(1) {
+        font-size: 0.8rem;
+        font-family: iranSanse;
+        font-weight: lighter;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.603);
+      }
+
+      span:nth-child(2) {
+        font-size: 1rem;
+        font-family: iranSanse;
+        font-weight: lighter;
+        white-space: bold;
+        color: #f08dd5;
+      }
+    }
+
+    button {
+      margin-right: 3%;
+      width: 90px;
+      color: #4d2466;
+      font-size: 1rem;
+      font-family: iranSanse;
+      border-radius: 20px;
+      padding: 0.2rem;
+      cursor: pointer;
+      border: none;
+      transition: all linear 0.3s;
+
+      &:hover {
+        background-color: #4d2466;
+        color: white;
+        border: 2px solid white;
+      }
+    }
+  }
+}

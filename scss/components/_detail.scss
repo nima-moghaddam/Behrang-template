@@ -1,0 +1,280 @@
+.detail {
+  width: 100%;
+  height: 1700px;
+  background-color: #4d2466;
+  z-index: 99;
+  overflow: hidden;
+
+  @media (max-width: 950px) {
+    height: 2500px;
+  }
+  @media (max-width: 750px) {
+    height: 2900px;
+  }
+  @media (max-width: 450px) {
+    height: 3100px;
+  }
+
+  &_container {
+    @include centering($dir: column);
+
+    &_img3 {
+      @include bgImg($zIndex: 101, $pos: relative);
+      top: -1150px;
+      right: 450px;
+    }
+
+    &_img6 {
+      @include bgImg($zIndex: 101, $pos: relative);
+      right: -210px;
+      bottom: 620px;
+    }
+
+    &_img5 {
+      @include bgImg($pos: relative);
+      left: -280px;
+      bottom: 990px;
+    }
+    &_img7 {
+      @include bgImg($zIndex: 101, $pos: relative);
+      left: 0;
+      bottom: 900;
+    }
+
+    //------------------------ header--------------------------
+
+    &_header {
+      @include centering;
+      width: 900px;
+      height: 20%;
+      z-index: 50;
+      margin-bottom: 70px;
+      margin-top: -1100px;
+
+      @media (max-width: 950px) {
+        width: 600px;
+      }
+      @media (max-width: 750px) {
+        @include centering($dir: column);
+        width: 170px;
+      }
+
+      & div {
+        @include centering($dir: column, $align: flex-start);
+        width: 300px;
+        margin-left: 30px;
+        margin-top: -120px;
+
+        @media (max-width: 950px) {
+          width: 200px;
+        }
+        @media (max-width: 750px) {
+          @include centering($dir: column, $align: center);
+          width: 170px;
+          margin-bottom: -10px;
+          margin-left: 0;
+        }
+        @media (max-width: 400px) {
+          width: 100px;
+          white-space: nowrap;
+        }
+
+        & p {
+          color: rgba(255, 255, 255, 0.774);
+          font-family: iranSanse;
+          font-weight: lighter;
+          font-size: 25px;
+
+          @media (max-width: 750px) {
+            text-align: center;
+            font-size: 22px;
+            padding: 12px;
+          }
+        }
+        & h2 {
+          color: white;
+          font-family: iranSanse;
+          font-weight: bold;
+          font-size: 30px;
+
+          @media (max-width: 750px) {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 22px;
+            white-space: nowrap;
+          }
+          @media (max-width: 450px) {
+            font-size: 20px;
+          }
+        }
+      }
+
+      &__text {
+        width: 600px;
+        color: rgba(255, 255, 255, 0.774);
+        font-family: iranSanse;
+        font-weight: lighter;
+        text-align: justify;
+
+        @media (max-width: 950px) {
+          width: 400px;
+        }
+        @media (max-width: 750px) {
+          width: 350px;
+        }
+        @media (max-width: 400px) {
+          width: 300px;
+        }
+      }
+    }
+
+    //------------------------ cards--------------------------
+
+    &_cards {
+      @include centering($align: flex-start);
+      width: 1000px;
+      height: 80%;
+      z-index: 50;
+
+      @media (max-width: 950px) {
+        @include centering($dir: column, $align: center);
+      }
+      @media (max-width: 750px) {
+        height: 100%;
+        width: 800px;
+      }
+
+      & div {
+        @include centering($dir: column, $justify: space-between);
+        width: 290px;
+        margin: 5px;
+        background-color: #ffccff;
+
+        @media (max-width: 950px) {
+          width: 550px;
+          height: 650px;
+        }
+        @media (max-width: 750px) {
+          width: 350px;
+          height: 850px;
+        }
+        @media (max-width: 450px) {
+          width: 300px;
+        }
+
+        & h3 {
+          width: 200px;
+          color: #4d2466;
+          font-family: iranSanse;
+          font-size: 33px;
+          font-weight: bold;
+          margin: 25px;
+          margin-bottom: 3px !important;
+
+          @media (max-width: 950px) {
+            width: 500px;
+            white-space: nowrap;
+            text-align: center;
+          }
+          @media (max-width: 750px) {
+            width: 400px;
+          }
+          @media (max-width: 450px) {
+            width: 300px;
+            white-space: normal;
+          }
+        }
+
+        & p {
+          width: 230px;
+          color: #4d2466;
+          font-family: iranSanse;
+          font-weight: lighter;
+          font-size: 15px;
+          margin: 22px;
+          text-align: justify;
+
+          @media (max-width: 950px) {
+            width: 490px;
+            padding: 5px;
+            margin: 5px;
+          }
+          @media (max-width: 750px) {
+            width: 320px;
+          }
+          @media (max-width: 450px) {
+            width: 270px;
+          }
+        }
+
+        & img {
+          width: 200px;
+          margin-bottom: 30px;
+        }
+      }
+
+      &__right {
+        height: 900px;
+        border-top-right-radius: 20px;
+
+        @media (max-width: 950px) {
+          height: 600px !important;
+          border-top-left-radius: 20px;
+        }
+        @media (max-width: 750px) {
+          height: 700px !important;
+          border-top-left-radius: 20px;
+        }
+        @media (max-width: 450px) {
+          height: 750px !important;
+        }
+      }
+
+      &__middle {
+        height: 1100px;
+        @media (max-width: 950px) {
+          height: 950px;
+        }
+        @media (max-width: 750px) {
+          height: 1200px;
+        }
+        @media (max-width: 450px) {
+          height: 950px !important;
+        }
+      }
+
+      &__left {
+        height: 800px;
+        border-top-left-radius: 20px;
+
+        @media (max-width: 950px) {
+          height: 500px !important;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+        }
+        @media (max-width: 750px) {
+          height: 600px !important;
+        }
+      }
+    }
+  }
+
+  &_img1 {
+    @include bgImg($pos: relative);
+    right: -700px;
+    bottom: -400px;
+  }
+  // ....................
+  &_img2 {
+    @include bgImg($pos: relative, $zIndex: 101);
+    right: -100px;
+    top: -270px;
+  }
+
+  &_img4 {
+    @include bgImg($pos: relative);
+    right: 290px;
+    top: 670px;
+  }
+}
